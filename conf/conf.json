@@ -1,0 +1,8 @@
+{
+	"kafka": "192.168.101.189:9092",
+	"reqtopic": "topic_access_process",
+	"rsptopic": "mqtt_v100_topic_access_process",
+	"mqtt": "192.168.101.189:1883",
+	"eureka": "192.168.101.189:9000",
+	"redis": "192.168.101.189:6379"
+}

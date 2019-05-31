@@ -1,0 +1,15 @@
+From centos
+MAINTAINER wayne "wayne@orcadt.com"
+
+RUN      yum -y install telnet
+RUN      yum -y install net-tools
+RUN mkdir -p /home/mqtt/
+RUN cd /home/mqtt/
+RUN mkdir -p /home/mqtt/conf
+ADD app.conf /home/mqtt/conf
+ADD start.sh /home/mqtt/
+ADD mqttprocess /home/mqtt/
+RUN chmod +x /home/mqtt/start.sh
+ENTRYPOINT ["/home/mqtt/mqttprocess"]
+CMD /home/mqtt/start.sh
+
